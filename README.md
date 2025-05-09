@@ -17,10 +17,12 @@ This project is a fully functional, AI-powered personal assistant built using **
 * [Streamlit](https://streamlit.io/)
 * [OpenAI API](https://openai.com/) *(Can be replaced with other LLMs)*
 
+
 ## 📸 Demo
 
 > Check out the walkthrough video of the project:
-> [Watch on YouTube]([https://www.youtube.com/...](https://www.youtube.com/watch?v=TzbN9_3p__M))
+> [Watch on YouTube](https://www.youtube.com/watch?v=TzbN9_3p__M)
+
 
 ## 📂 Getting Started
 
