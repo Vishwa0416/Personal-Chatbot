@@ -3,12 +3,20 @@ from langchain_openai import ChatOpenAI
 from langgraph.graph import StateGraph
 from langchain.schema import HumanMessage, SystemMessage
 from typing import TypedDict
+from dotenv import load_dotenv
 
 class ChatState(TypedDict):
     history: list
 
 # Initialize OpenAI LLM using environment variable (ensure OPENAI_API_KEY is set)
-llm = ChatOpenAI(model="gpt-4", temperature=0.7)
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+
+llm = ChatOpenAI(
+    openai_api_key=api_key,
+    model="gpt-3.5-turbo",
+    temperature=0.7
+)
 
 def chat_node(state: ChatState) -> ChatState:
     history = state.get("history", [])
